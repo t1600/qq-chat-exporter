@@ -183,7 +183,9 @@ export interface CreateTaskRequest {
     /** 自定义导出路径（Issue #192） */
     outputDir?: string
     /** 在文件名中包含聊天名称（Issue #216） */
-    useNameInFileName?: boolean
+    useNameInFileName?: boolean,
+    /** 包含原始raw */
+    includeRawData?: boolean;
   }
 }
 

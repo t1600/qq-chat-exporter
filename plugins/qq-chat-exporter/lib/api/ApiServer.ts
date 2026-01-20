@@ -3712,7 +3712,7 @@ export class QQChatExporterApiServer {
                     await exporter.export(sortedMessages, chatInfo);
                     break;
                 case 'JSON':
-                    exporter = new JsonExporter(exportOptions, { embedAvatarsAsBase64: options?.embedAvatarsAsBase64 ?? false }, this.core);
+                    exporter = new JsonExporter(exportOptions, { embedAvatarsAsBase64: options?.embedAvatarsAsBase64 ?? false ,includeRawData: options?.includeRawData ?? false  }, this.core);
                     await exporter.export(sortedMessages, chatInfo);
                     break;
                 case 'EXCEL':
