@@ -919,7 +919,7 @@ export class JsonExporter extends BaseExporter {
      * 将单个ParsedMessage转换为CleanMessage（流式导出使用）
      */
     private convertParsedToClean(parsedMsg: ParsedMessage): CleanMessage {
-        return {
+        const cleanMsg: CleanMessage = {
             id: parsedMsg.messageId,
             seq: parsedMsg.messageSeq,
             timestamp: parsedMsg.timestamp.getTime(),
@@ -964,6 +964,13 @@ export class JsonExporter extends BaseExporter {
             recalled: parsedMsg.isRecalled,
             system: parsedMsg.isSystemMessage
         };
+
+        // 如果启用了 includeRawData 选项，添加原始消息数据
+        if (this.jsonOptions.includeRawData && parsedMsg.rawMessage) {
+            cleanMsg.rawMessage = parsedMsg.rawMessage;
+        }
+
+        return cleanMsg;
     }
 
     /**

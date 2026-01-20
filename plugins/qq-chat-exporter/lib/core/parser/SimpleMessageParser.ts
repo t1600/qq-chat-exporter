@@ -174,6 +174,7 @@ export interface CleanMessage {
   content: MessageContent;
   recalled: boolean;
   system: boolean;
+  rawMessage?: any;        // 可选：原始消息数据（当 includeRawData=true 时包含）
 }
 
 export interface MessageContent {
