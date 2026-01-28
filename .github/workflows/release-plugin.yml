@@ -210,8 +210,23 @@ jobs:
           <summary>Framework 模式使用方法</summary>
 
           1. 解压下载的 \`NapCat-Framework-QCE-${VERSION}.zip\`
-          2. 运行 \`napiLoader-debug.bat\`（可查看访问令牌）
-          3. 访问 \`http://localhost:40653/qce-v4-tool\`
+          2. 运行 \`napiLoader.bat\`
+          3. 用手机扫码登录 QQ
+          4. 访问 \`http://localhost:40653/qce-v4-tool\`
+
+          <details>
+          <summary>如何找到访问令牌？</summary>
+
+          按 \`Win + R\`，输入 \`%USERPROFILE%\\.qq-chat-exporter\` 并回车，打开 \`security.json\` 文件，找到 \`accessToken\` 字段：
+
+          \`\`\`json
+          {
+            "accessToken": "你的令牌在这里",
+            ...
+          }
+          \`\`\`
+
+          </details>
 
           </details>
 
@@ -228,7 +243,7 @@ jobs:
 
           本软件完全免费开源，遵循 GPL-3.0 协议。如果有人向你收费，立即申请退款并举报。
 
-          [使用文档](https://deepwiki.com/shuakami/qq-chat-exporter) | [问题反馈](https://github.com/shuakami/qq-chat-exporter/issues) | [NapCat 项目](https://github.com/NapNeko/NapCatQQ)
+          [使用文档](https://shuakami.github.io/qq-chat-exporter/) | [问题反馈](https://github.com/shuakami/qq-chat-exporter/issues) | [NapCat 项目](https://github.com/NapNeko/NapCatQQ)
 
           ### Contributors
 
