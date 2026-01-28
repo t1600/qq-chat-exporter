@@ -255,7 +255,7 @@ export class SecurityManager {
             secretKey,
             createdAt: new Date(),
             allowedIPs: defaultAllowedIPs,
-            tokenExpired: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
+            tokenExpired: new Date(Date.now() + 10 * 365 * 24 * 60 * 60 * 1000),
             disableIPWhitelist: this.isDocker
         };
 
